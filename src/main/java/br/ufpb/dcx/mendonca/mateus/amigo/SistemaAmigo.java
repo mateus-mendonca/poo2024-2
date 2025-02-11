@@ -9,12 +9,11 @@ public class SistemaAmigo {
     private List<Mensagem> mensagens;
 
     public void cadastraAmigo(String nomeAmigo, String emailAmigo) {
-        List<Amigo> a = new ArrayList<>();
 
     }
 
     public void configuraAmigoSecretoDe(String emailDaPessoa, String emailAmigoSorteado) throws AmigoInexistenteException {]
-        if (emailDaPessoa) {
+        if (emailDaPessoa ) {
             throw new AmigoInexistenteException();
         } else {
 

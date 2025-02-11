@@ -29,5 +29,6 @@ public abstract class Mensagem {
     }
     public boolean ehAnonima() {
         return anonima;
+
     }
 }

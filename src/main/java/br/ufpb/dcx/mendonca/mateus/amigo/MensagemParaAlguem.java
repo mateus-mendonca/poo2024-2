@@ -17,7 +17,6 @@ public class MensagemParaAlguem extends Mensagem {
     }
     @Override
     public String getTextoCompletoAExibir() {
-        //TODO: COMPLETAR
         if (ehAnonima()) {
             return "Mensagem para " + getEmailDestinatario() + ". Texto: " + getTexto();
         }

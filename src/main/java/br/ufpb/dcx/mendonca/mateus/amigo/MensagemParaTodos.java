@@ -7,7 +7,6 @@ public class MensagemParaTodos extends Mensagem {
     }
     @Override
     public String getTextoCompletoAExibir() {
-        //TODO: COMPLETAR
         if (ehAnonima()) {
             return "Mensagem para todos. Texto: "+getTexto();
         }

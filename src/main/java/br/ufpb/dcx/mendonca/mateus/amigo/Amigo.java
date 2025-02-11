@@ -35,4 +35,5 @@ public class Amigo {
     public void setEmailAmigoSorteado(String emailAmigoSorteado) {
         this.emailAmigoSorteado = emailAmigoSorteado;
     }
+
 }
