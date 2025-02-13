@@ -9,7 +9,7 @@ public class SistemaLojaRoupasPOO implements SistemaLojaRoupas {
     private Map<String, Roupa> roupasMap;
 
     public SistemaLojaRoupasPOO() {
-        this.roupasMap = HashMap<>();
+        this.roupasMap = new HashMap<>();
     }
 
     public List<Roupa> pesquisaRoupasPorTamanho(Tamanho tamanho) {
@@ -20,7 +20,7 @@ public class SistemaLojaRoupasPOO implements SistemaLojaRoupas {
         return null;
     }
 
-    public Tamanho consultaTamanhDaRoupa(String codigoRoupa) {
+    public Tamanho consultaTamanhoDaRoupa(String codigoRoupa) throws RoupaInexistenteException{
         return null;
     }
 
@@ -37,8 +37,15 @@ public class SistemaLojaRoupasPOO implements SistemaLojaRoupas {
 
     }
 
-    public void pesquisaQuantidadeDeRoupaNoEstoque(String codigoRoupa) throws RoupaInexistenteException {
-
+    public int pesquisaQuantidadeDeRoupaNoEstoque(String codigoRoupa) throws RoupaInexistenteException {
+        for (Roupa r : roupasMap.size()) {
+            if (this.roupasMap.containsKey(codigoRoupa)) {
+                int quant = r.getQuantidade();
+            } else {
+                throw new RoupaInexistenteException("Nenhuma roupa com código "+codigoRoupa+ " encontrada.");
+            }
+        }
+        return quant;
     }
 
     public Roupa pesquisaRoupa(String codigoRoupa) throws RoupaInexistenteException {
