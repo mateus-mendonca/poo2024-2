@@ -11,3 +11,4 @@ public interface SistemaLojaRoupas {
     public void pesquisaQuantidadeDeRoupaNoEstoque(String codigoRoupa) throws RoupaInexistenteException;
     public Roupa pesquisaRoupa(String codigoRoupa) throws RoupaInexistenteException;
 }
+

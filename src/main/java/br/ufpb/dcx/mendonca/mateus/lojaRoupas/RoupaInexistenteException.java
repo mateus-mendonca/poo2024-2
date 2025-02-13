@@ -5,3 +5,4 @@ public class RoupaInexistenteException extends Exception {
         super(msg);
     }
 }
+
