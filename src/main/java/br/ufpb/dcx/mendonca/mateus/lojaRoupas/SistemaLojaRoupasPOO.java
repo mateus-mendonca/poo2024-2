@@ -1,5 +1,6 @@
 package br.ufpb.dcx.mendonca.mateus.lojaRoupas;
 
+import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 import java.util.HashMap;
@@ -17,7 +18,13 @@ public class SistemaLojaRoupasPOO implements SistemaLojaRoupas {
     }
 
     public List<Roupa> pesquisaRoupasComDescricaoComecandoCom(String prefixoDescricao) {
-        return null;
+        List<Roupa> roupasComDesc = new LinkedList<>();
+        for (Roupa r : roupasMap.size()) {
+            if (this.roupasMap.get(descricao).equals(prefixoDescricao)) {
+                roupasComDesc.add(r);
+            }
+        }
+        return roupasComDesc;
     }
 
     public Tamanho consultaTamanhoDaRoupa(String codigoRoupa) throws RoupaInexistenteException{
@@ -34,22 +41,27 @@ public class SistemaLojaRoupasPOO implements SistemaLojaRoupas {
     }
 
     public void alteraQuantidadeDeRoupaNoEstoque(String codigoRoupa, int novaQuantidade) throws RoupaInexistenteException{
-
+        if (!this.roupasMap.containsKey(codigoRoupa)) {
+            throw new RoupaInexistenteException("Nenhuma roupa com código "+codigoRoupa+ " encontrada.");
+        } else {
+            this.roupasMap.get(quantidade).setQuantidade(novaQuantidade);
+        }
     }
 
     public int pesquisaQuantidadeDeRoupaNoEstoque(String codigoRoupa) throws RoupaInexistenteException {
-        for (Roupa r : roupasMap.size()) {
-            if (this.roupasMap.containsKey(codigoRoupa)) {
-                int quant = r.getQuantidade();
-            } else {
-                throw new RoupaInexistenteException("Nenhuma roupa com código "+codigoRoupa+ " encontrada.");
-            }
+        if (!this.roupasMap.containsKey(codigoRoupa)) {
+            throw new RoupaInexistenteException("Nenhuma roupa com código "+codigoRoupa+ " encontrada.");
+        } else {
+            return this.roupasMap.get();
         }
-        return quant;
     }
 
     public Roupa pesquisaRoupa(String codigoRoupa) throws RoupaInexistenteException {
-        return null;
+        if (!this.roupasMap.containsKey(codigoRoupa)) {
+            throw new RoupaInexistenteException("Nenhuma roupa com código "+codigoRoupa+ " encontrada.");
+        } else {
+            return this.roupasMap.get(descricao);
+        }
     }
 }
 

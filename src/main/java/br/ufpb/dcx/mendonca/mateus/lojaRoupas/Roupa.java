@@ -15,19 +15,19 @@ public class Roupa {
     }
 
     public String getCodigo() {
-        return this.codigo;
+        return codigo;
     }
 
     public String getDescricao() {
-        return this.descricao;
+        return descricao;
     }
 
     public int getQuantidade() {
-        return this.quantidade;
+        return quantidade;
     }
 
     public Tamanho getTamanho() {
-        return this.tamanho;
+        return tamanho;
     }
 
     public void setQuantidade(int quantidade) {
@@ -36,11 +36,11 @@ public class Roupa {
 
     @Override
     public String toString() {
-        return "Roupa{" +
-                "codigo='" + codigo + '\'' +
-                ", descricao='" + descricao + '\'' +
-                ", quantidade=" + quantidade +
-                ", tamanho=" + tamanho +
+        return "Roupa {" +
+                "de codigo '" + codigo + '\'' +
+                ", descricao: '" + descricao + '\'' +
+                ", com " + quantidade + " em estoque " +
+                ", de tamanho " + tamanho +
                 '}';
     }
 }
