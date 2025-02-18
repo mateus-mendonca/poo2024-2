@@ -37,10 +37,8 @@ public class SistemaLojaRoupasPOO implements SistemaLojaRoupas {
         if (!this.roupasMap.containsKey(codigoRoupa)) {
             throw new RoupaInexistenteException("Roupa já cadastrada: "+codigoRoupa);
         } else {
-            for (Roupa r : this.roupasMap.values()) {
-                return r.getTamanho();
+
             }
-        }
         //TODO
         return null;
     }
@@ -65,12 +63,13 @@ public class SistemaLojaRoupasPOO implements SistemaLojaRoupas {
     }
 
     public int pesquisaQuantidadeDeRoupaNoEstoque(String codigoRoupa) throws RoupaInexistenteException {
+        int quantRoupaNoEstoque = 0;
         if (!this.roupasMap.containsKey(codigoRoupa)) {
             throw new RoupaInexistenteException("Nenhuma roupa com código "+codigoRoupa+ " encontrada.");
         } else {
-            //TODO
-            return 0;
+            quantRoupaNoEstoque++;
         }
+        return quantRoupaNoEstoque;
     }
 
     public Roupa pesquisaRoupa(String codigoRoupa) throws RoupaInexistenteException {
