@@ -41,6 +41,8 @@ public class SistemaLojaRoupasPOO implements SistemaLojaRoupas {
                 return r.getTamanho();
             }
         }
+        //TODO
+        return null;
     }
 
     public void cadastraRoupa(String codigoRoupa, String descricao, Tamanho tamanho, int quantidade) throws RoupaJaExistenteException{
@@ -66,7 +68,8 @@ public class SistemaLojaRoupasPOO implements SistemaLojaRoupas {
         if (!this.roupasMap.containsKey(codigoRoupa)) {
             throw new RoupaInexistenteException("Nenhuma roupa com código "+codigoRoupa+ " encontrada.");
         } else {
-            return
+            //TODO
+            return 0;
         }
     }
 
