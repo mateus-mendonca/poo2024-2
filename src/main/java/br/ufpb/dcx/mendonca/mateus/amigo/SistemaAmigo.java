@@ -8,7 +8,9 @@ public class SistemaAmigo {
     private List<Amigo> amigos;
     private List<Mensagem> mensagens;
 
-    public void cadastraAmigo(String nomeAmigo, String emailAmigo) {
+    public void cadastraAmigo(String nomeAmigo, String emailAmigo, String emailAmigoSorteado) {
+        Amigo amigo = new Amigo(nomeAmigo, emailAmigo, emailAmigoSorteado);
+        this.amigos.add(amigo);
 
     }
 

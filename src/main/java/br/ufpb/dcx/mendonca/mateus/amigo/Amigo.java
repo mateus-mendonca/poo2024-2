@@ -2,30 +2,30 @@ package br.ufpb.dcx.mendonca.mateus.amigo;
 
 public class Amigo {
 
-    private String nome;
-    private String email;
+    private String nomeAmigo;
+    private String emailAmigo;
     private String emailAmigoSorteado;
 
-    public Amigo(String nome, String email, String emailAmigoSorteado) {
-        this.nome = nome;
-        this.email = email;
+    public Amigo(String nomeAmigo, String emailAmigo, String emailAmigoSorteado) {
+        this.nomeAmigo = nomeAmigo;
+        this.emailAmigo = emailAmigo;
         this.emailAmigoSorteado = emailAmigoSorteado;
     }
 
     public String getNome() {
-        return nome;
+        return nomeAmigo;
     }
 
     public void setNome(String nome) {
-        this.nome = nome;
+        this.nomeAmigo = nomeAmigo;
     }
 
     public String getEmail() {
-        return email;
+        return emailAmigo;
     }
 
     public void setEmail(String email) {
-        this.email = email;
+        this.emailAmigo = emailAmigo;
     }
 
     public String getEmailAmigoSorteado() {
